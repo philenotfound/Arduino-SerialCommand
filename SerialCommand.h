@@ -51,6 +51,7 @@ class SerialCommand {
     void readSerial();    // Main entry point.
     void clearBuffer();   // Clears the input buffer.
     char *next();         // Returns pointer to next token found in command buffer (for getting arguments to commands).
+    void setTerm( unsigned char term_chr ); //Set a new character signalling end of line
 
   private:
     // Command/handler dictionary

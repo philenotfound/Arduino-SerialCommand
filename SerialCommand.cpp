@@ -142,3 +142,8 @@ void SerialCommand::clearBuffer() {
 char *SerialCommand::next() {
   return strtok_r(NULL, delim, &last);
 }
+
+void SerialCommand::setTerm( unsigned char term_chr )
+{
+	term = term_chr;
+}
